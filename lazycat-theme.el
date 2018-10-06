@@ -390,6 +390,9 @@
  '(epe-pipeline-host-face ((t (:foreground "systemGreenColor"))))
  '(epe-pipeline-time-face ((t (:foreground "systemGrayColor"))))
  '(epe-pipeline-user-face ((t (:foreground "gold"))))
+ '(feebleline-linum-face ((t (:foreground "gray35"))))
+ '(feebleline-time-face ((t (:foreground "gray35"))))
+ '(feebleline-git-branch-face ((t (:foreground "gray35"))))
  )
 
 (provide 'lazycat-theme)
