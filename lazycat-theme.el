@@ -393,6 +393,7 @@
  '(feebleline-linum-face ((t (:foreground "gray35"))))
  '(feebleline-time-face ((t (:foreground "gray35"))))
  '(feebleline-git-branch-face ((t (:foreground "gray35"))))
+ '(button ((t (:foreground "deepskyblue3" :underline t))))
  )
 
 (provide 'lazycat-theme)
