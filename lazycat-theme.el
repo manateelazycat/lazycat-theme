@@ -13,6 +13,12 @@
       (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))
       (set-fontset-font (frame-parameter nil 'font) 'unicode (eval emacs-font-name))))
 
+;; Use better titlebar for MacOS.
+(when (featurep 'cocoa)
+  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+  (add-to-list 'default-frame-alist '(ns-appearance . dark))
+  )
+
 ;; Set line height.
 (set-face-attribute 'default nil :height 130)
 
