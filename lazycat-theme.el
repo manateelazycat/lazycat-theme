@@ -27,7 +27,7 @@
 
 ;; Set face variable.
 (custom-set-variables
- '(hl-paren-colors (quote ("Cyan" "Gold" "Red")))
+ '(hl-paren-colors (quote ("#EE8822" "#F94949" "Gold" "Red")))
  '(imaxima-bg-color "black")
  '(imaxima-equation-color "Green3")
  '(imaxima-fg-color "DarkGreen")
