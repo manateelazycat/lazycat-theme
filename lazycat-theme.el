@@ -301,7 +301,7 @@
  '(reb-match-1 ((((class color) (background dark)) (:background "dodgerblue3" :foreground "black"))))
  '(reb-match-2 ((((class color) (background dark)) (:background "chartreuse3" :foreground "black"))))
  '(reb-match-3 ((((class color) (background dark)) (:background "sienna3" :foreground "black"))))
- '(region ((((class color) (min-colors 88) (background dark)) (:background "green4" :foreground "black"))))
+ '(region ((((class color) (min-colors 88) (background dark)) (:background "#3F90F7" :foreground "#FFF"))))
  '(rfcview-headlink-face ((t (:foreground "DodgerBlue"))))
  '(rfcview-headname-face ((t (:foreground "DarkRed" :underline t :weight bold))))
  '(rfcview-headnum-face ((t (:foreground "DarkRed" :weight bold))))
