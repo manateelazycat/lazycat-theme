@@ -7,7 +7,7 @@
  ((featurep 'cocoa)
   (setq emacs-font-name "Monaco"))
  ((string-equal system-type "gnu/linux")
-  (setq emacs-font-name "Droid Sans Mono")))
+  (setq emacs-font-name "WenQuanYi Micro Hei Mono")))
 (if (display-grayscale-p)
     (progn
       (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))
