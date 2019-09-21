@@ -33,7 +33,7 @@
    '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
                   :inverse-video nil :box nil :strike-through nil :overline nil
                   :underline nil :slant normal :weight normal :height 130
-                  :width normal :family "Noto Sans Mono CJK SC"))))
+                  :width normal :family "WenQuanYi Micro Hei Mono"))))
    )))
 
 ;; Make fringe mini size.
