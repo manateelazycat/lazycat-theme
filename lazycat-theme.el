@@ -19,8 +19,22 @@
   (add-to-list 'default-frame-alist '(ns-appearance . dark))
   )
 
-;; Set line height.
-(set-face-attribute 'default nil :height 130)
+;; Set default face.
+(cond
+ ((featurep 'cocoa)
+  (custom-set-faces
+   '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
+                  :inverse-video nil :box nil :strike-through nil :overline nil
+                  :underline nil :slant normal :weight normal :height 130
+                  :width normal :family "Monaco"))))
+   ))
+ ((string-equal system-type "gnu/linux")
+  (custom-set-faces
+   '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
+                  :inverse-video nil :box nil :strike-through nil :overline nil
+                  :underline nil :slant normal :weight normal :height 130
+                  :width normal :family "Noto Sans Mono CJK SC"))))
+   )))
 
 ;; Make fringe mini size.
 (set-fringe-mode '(0 . 0))
@@ -43,7 +57,6 @@
 
 ;; Set face.
 (custom-set-faces
- '(default ((t (:background "black" :foreground "#30A339"))))
  '(ac-candidate-face ((t (:background "#191919" :foreground "#878787"))))
  '(ac-clang-candidate-face ((t (:background "#191919" :foreground "#878787"))))
  '(ac-clang-selection-face ((t (:background "darkred" :foreground "grey"))))
