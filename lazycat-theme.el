@@ -4,10 +4,10 @@
 (defvar emacs-font-size 14
   "The default font size.")
 (cond
- ((featurep 'cocoa)
-  (setq emacs-font-name "Monaco"))
- ((string-equal system-type "gnu/linux")
-  (setq emacs-font-name "WenQuanYi Micro Hei Mono")))
+  ((featurep 'cocoa)
+   (setq emacs-font-name "Monaco"))
+  ((string-equal system-type "gnu/linux")
+   (setq emacs-font-name "Source Code Pro")))
 (if (display-grayscale-p)
     (progn
       (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))
@@ -21,20 +21,20 @@
 
 ;; Set default face.
 (cond
- ((featurep 'cocoa)
-  (custom-set-faces
-   '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
-                  :inverse-video nil :box nil :strike-through nil :overline nil
-                  :underline nil :slant normal :weight normal :height 130
-                  :width normal :family "Monaco"))))
-   ))
- ((string-equal system-type "gnu/linux")
-  (custom-set-faces
-   '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
-                  :inverse-video nil :box nil :strike-through nil :overline nil
-                  :underline nil :slant normal :weight normal :height 130
-                  :width normal :family "WenQuanYi Micro Hei Mono"))))
-   )))
+  ((featurep 'cocoa)
+   (custom-set-faces
+    '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
+                   :inverse-video nil :box nil :strike-through nil :overline nil
+                   :underline nil :slant normal :weight normal :height 130
+                   :width normal :family "Monaco"))))
+    ))
+  ((string-equal system-type "gnu/linux")
+   (custom-set-faces
+    '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
+                   :inverse-video nil :box nil :strike-through nil :overline nil
+                   :underline nil :slant normal :weight normal :height 130
+                   :width normal :family "WenQuanYi Micro Hei Mono"))))
+    )))
 
 ;; Make fringe mini size.
 (set-fringe-mode '(0 . 0))
