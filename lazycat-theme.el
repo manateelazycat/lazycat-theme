@@ -4,10 +4,10 @@
 (defvar emacs-font-size 14
   "The default font size.")
 (cond
-  ((featurep 'cocoa)
-   (setq emacs-font-name "Monaco"))
-  ((string-equal system-type "gnu/linux")
-   (setq emacs-font-name "Source Code Pro")))
+ ((featurep 'cocoa)
+  (setq emacs-font-name "Monaco"))
+ ((string-equal system-type "gnu/linux")
+  (setq emacs-font-name "Source Code Pro")))
 (if (display-grayscale-p)
     (progn
       (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))
@@ -21,20 +21,20 @@
 
 ;; Set default face.
 (cond
-  ((featurep 'cocoa)
-   (custom-set-faces
-    '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
-                   :inverse-video nil :box nil :strike-through nil :overline nil
-                   :underline nil :slant normal :weight normal :height 130
-                   :width normal :family "Monaco"))))
-    ))
-  ((string-equal system-type "gnu/linux")
-   (custom-set-faces
-    '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
-                   :inverse-video nil :box nil :strike-through nil :overline nil
-                   :underline nil :slant normal :weight normal :height 130
-                   :width normal :family "WenQuanYi Micro Hei Mono"))))
-    )))
+ ((featurep 'cocoa)
+  (custom-set-faces
+   '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
+                           :inverse-video nil :box nil :strike-through nil :overline nil
+                           :underline nil :slant normal :weight normal :height 130
+                           :width normal :family "Monaco"))))
+   ))
+ ((string-equal system-type "gnu/linux")
+  (custom-set-faces
+   '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#30A339"
+                           :inverse-video nil :box nil :strike-through nil :overline nil
+                           :underline nil :slant normal :weight normal :height 130
+                           :width normal :family "WenQuanYi Micro Hei Mono"))))
+   )))
 
 ;; Make fringe mini size.
 (set-fringe-mode '(0 . 0))
@@ -84,21 +84,21 @@
  '(company-tooltip ((t (:background "#202020" :foreground "grey"))))
  '(company-tooltip-annotation ((t (:foreground "gold"))))
  '(company-tooltip-annotation-selection ((t (:foreground "white"))))
- '(company-tooltip-common ((t (:inherit company-tooltip :foreground "#F94949"))))
- '(company-tooltip-common-selection ((t (:background "gray20" :foreground "#F94949"))))
- '(company-tooltip-selection ((t (:background "gray20" :foreground "#F94949"))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :foreground "#86f287"))))
+ '(company-tooltip-common-selection ((t (:background "gray20"))))
+ '(company-tooltip-selection ((t (:background "gray20" :foreground "#86f287"))))
  '(completion-dynamic-face ((((class color) (background dark)) (:background "DarkOrange" :foreground "black"))))
  '(completion-tooltip-face ((t (:inherit tooltip :background "grey5" :foreground "khaki1"))))
  '(completions-common-part ((t (:foreground "Green3"))))
  '(completions-first-difference ((t (:foreground "Grey60"))))
- '(cursor ((t (:background "red"))))
+ '(cursor ((t (:background "#109c11"))))
  '(custom-button ((((type x w32 ns) (class color)) (:background "black" :foreground "#EE8822" :underline t))))
  '(custom-link ((((type x w32 ns) (class color)) (:background "black" :foreground "#EE8822" :underline t))))
  '(custom-comment ((((class grayscale color) (background dark)) (:background "grey5" :foreground "green"))))
- '(custom-group-tag ((t (:inherit variable-pitch :foreground "DodgerBlue" :underline t :weight bold :height 1.2))))
+ '(custom-group-tag ((t (:inherit variable-pitch :foreground "#00b8ff" :underline t :weight bold :height 1.2))))
  '(custom-variable-tag ((t (:foreground "gold" :underline t :weight bold))))
  '(diff-header ((((class color) (min-colors 88) (background dark)) (:background "grey30" :foreground "gold"))))
- '(dired-directory ((t (:inherit font-lock-function-name-face :foreground "DodgerBlue"))))
+ '(dired-directory ((t (:inherit font-lock-function-name-face :foreground "#00b8ff"))))
  '(dired-header ((t (:inherit font-lock-type-face :foreground "gold"))))
  '(dired-ignored ((t (:inherit shadow :foreground "grey50"))))
  '(dired-symlink ((t (:inherit font-lock-keyword-face :foreground "OrangeRed3"))))
@@ -106,7 +106,7 @@
  '(diredp-deletion ((t (:background "Black" :foreground "red"))))
  '(diredp-deletion-file-name ((t (:foreground "red"))))
  '(diredp-dir-heading ((t (:background "Black" :foreground "Gold"))))
- '(diredp-dir-priv ((t (:background "Black" :foreground "DodgerBlue"))))
+ '(diredp-dir-priv ((t (:background "Black" :foreground "#00b8ff"))))
  '(diredp-display-msg ((t (:foreground "Gold"))))
  '(diredp-exec-priv ((t (:background "Black" :foreground "DeepSkyBlue3"))))
  '(diredp-file-name ((t (:foreground "#30A339"))))
@@ -140,7 +140,7 @@
  '(eperiodic-p-block-face ((((class color)) (:inherit eperiodic-generic-block-face :background "Green4" :foreground "Grey"))))
  '(eperiodic-period-number-face ((t (:foreground "grey" :weight bold))))
  '(eperiodic-s-block-face ((((class color)) (:inherit eperiodic-generic-block-face :background "tan3" :foreground "cornsilk2"))))
- '(erc-direct-msg-face ((t (:foreground "DodgerBlue"))))
+ '(erc-direct-msg-face ((t (:foreground "#00b8ff"))))
  '(erc-input-face ((t (:foreground "Green2"))))
  '(erc-my-nick-face ((t (:foreground "DarkRed" :weight bold))))
  '(erc-notice-face ((t (:foreground "Gray20" :weight bold))))
@@ -152,23 +152,23 @@
  '(flycheck-posframe-face ((t (:inherit default :foreground "gold"))))
  '(flycheck-posframe-error-face ((t (:background "gray12" :foreground "red3" :box (:line-width 1 :color "grey20")))))
  '(flycheck-posframe-info-face ((t (:inherit flycheck-posframe-face :background "gray12" :box (:line-width 1 :color "grey20")))))
- '(font-lock-builtin-face ((((class color) (min-colors 88) (background dark)) (:foreground "#FF6666"))))
- '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "gray30"))))
- '(font-lock-constant-face ((((class color) (min-colors 88) (background dark)) (:foreground "#E73C70"))))
- '(font-lock-doc-face ((t (:inherit font-lock-string-face :foreground "#999999"))))
- '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "#F94949"))))
- '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "#EE8822"))))
+ '(font-lock-builtin-face ((((class color) (min-colors 88) (background dark)) (:foreground "#00b8ff"))))
+ '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "#444444"))))
+ '(font-lock-constant-face ((((class color) (min-colors 88) (background dark)) (:foreground "#bd00ff"))))
+ '(font-lock-doc-face ((t (:inherit font-lock-string-face :foreground "#a7a7a7"))))
+ '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "gold2"))))
+ '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "#001eff"))))
  '(font-lock-preprocessor-face ((t (:inherit font-lock-builtin-face :foreground "Cyan3" :weight bold))))
  '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "#DFD67A"))))
- '(font-lock-type-face ((((class color) (min-colors 88) (background dark)) (:foreground "#E73C70"))))
- '(font-lock-variable-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "#F94949"))))
+ '(font-lock-type-face ((((class color) (min-colors 88) (background dark)) (:foreground "#00b8ff"))))
+ '(font-lock-variable-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "gold2"))))
  '(font-lock-warning-face ((((class color) (min-colors 88) (background dark)) (:foreground "red" :weight bold))))
  '(fringe ((((class color) (background dark)) (:background "gray3"))))
  '(gnus-button ((t (:foreground "khaki3" :weight bold))))
  '(gnus-cite-1 ((((class color) (background dark)) (:foreground "Grey50"))))
  '(gnus-header-content ((t (:foreground "Green" :slant italic))))
  '(gnus-header-from ((((class color) (background dark)) (:foreground "khaki"))))
- '(gnus-header-name ((((class color) (background dark)) (:foreground "DodgerBlue"))))
+ '(gnus-header-name ((((class color) (background dark)) (:foreground "#00b8ff"))))
  '(gnus-header-subject ((((class color) (background dark)) (:foreground "HotPink"))))
  '(gnus-signature ((t (:foreground "Orange" :slant italic))))
  '(gnus-summary-high-ancient ((t (:foreground "Grey50" :weight bold))))
@@ -179,9 +179,9 @@
  '(gnus-summary-normal-read ((((class color) (background dark)) (:foreground "khaki2"))))
  '(go-to-char-highlight ((((class color) (background dark)) (:background "Pink" :foreground "Black"))))
  '(header-line ((t (:background "Black" :foreground "Green"))))
- '(helm-buffer-directory ((t (:foreground "DodgerBlue"))))
+ '(helm-buffer-directory ((t (:foreground "#00b8ff"))))
  '(helm-ff-directory ((t (:background "black" :foreground "dodgerblue"))))
- '(helm-ff-dotted-directory ((t (:foreground "DodgerBlue"))))
+ '(helm-ff-dotted-directory ((t (:foreground "#00b8ff"))))
  '(helm-ff-dotted-symlink-directory ((t (:foreground "DarkOrange"))))
  '(helm-ff-file ((t (:background "black" :foreground "darkgreen"))))
  '(helm-ff-invalid-symlink ((t (:background "black" :foreground "red"))))
@@ -226,7 +226,7 @@
  '(info-string ((t (:foreground "Grey50"))))
  '(info-title-1 ((t (:inherit info-title-2 :foreground "Gold" :height 1.1))))
  '(info-title-2 ((t (:inherit info-title-3 :foreground "red" :height 1.1))))
- '(info-title-3 ((t (:inherit info-title-4 :foreground "DodgerBlue" :height 1.1))))
+ '(info-title-3 ((t (:inherit info-title-4 :foreground "#00b8ff" :height 1.1))))
  '(info-title-4 ((t (:inherit variable-pitch :foreground "Green" :weight bold))))
  '(isearch ((((class color) (min-colors 88) (background dark)) (:background "brown" :foreground "white"))))
  '(isearch-fail ((((class color) (min-colors 88) (background dark)) (:background "red4" :foreground "white"))))
@@ -274,7 +274,7 @@
  '(newsticker-old-item-face ((t (:foreground "purple" :weight bold))))
  '(newsticker-statistics-face ((t (:foreground "red" :slant italic :height 0.8))))
  '(newsticker-treeview-face ((t (:foreground "Green4" :weight normal))))
- '(newsticker-treeview-new-face ((t (:inherit newsticker-treeview-face :foreground "DodgerBlue" :weight bold))))
+ '(newsticker-treeview-new-face ((t (:inherit newsticker-treeview-face :foreground "#00b8ff" :weight bold))))
  '(newsticker-treeview-old-face ((((class color) (background dark)) (:inherit newsticker-treeview-face :foreground "purple"))))
  '(newsticker-treeview-selection-face ((((class color) (background dark)) (:background "DarkRed" :foreground "White"))))
  '(org-date ((((class color) (background dark)) (:foreground "ivory4" :underline t))))
@@ -315,7 +315,7 @@
  '(reb-match-2 ((((class color) (background dark)) (:background "chartreuse3" :foreground "black"))))
  '(reb-match-3 ((((class color) (background dark)) (:background "sienna3" :foreground "black"))))
  '(region ((((class color) (min-colors 88) (background dark)) (:background "#3F90F7" :foreground "#FFF"))))
- '(rfcview-headlink-face ((t (:foreground "DodgerBlue"))))
+ '(rfcview-headlink-face ((t (:foreground "#00b8ff"))))
  '(rfcview-headname-face ((t (:foreground "DarkRed" :underline t :weight bold))))
  '(rfcview-headnum-face ((t (:foreground "DarkRed" :weight bold))))
  '(rfcview-mouseover-face ((t (:background "DarkRed" :foreground "white" :weight bold))))
@@ -348,7 +348,7 @@
  '(w3m-form-face ((((class color) (background dark)) (:foreground "khaki2" :underline "brown"))) t)
  '(w3m-header-line-location-content ((((class color) (background dark)) (:background "black" :foreground "Green"))))
  '(w3m-header-line-location-title ((((class color) (background dark)) (:background "black" :foreground "brown"))))
- '(w3m-history-current-url ((t (:background "black" :foreground "DodgerBlue"))))
+ '(w3m-history-current-url ((t (:background "black" :foreground "#00b8ff"))))
  '(w3m-image ((((class color) (background dark)) (:background "Black" :foreground "DarkRed"))))
  '(w3m-image-anchor ((((class color) (background dark)) (:background "Black"))))
  '(w3m-link-numbering ((((class color) (background dark)) (:background "Black" :foreground "Grey"))))
@@ -360,7 +360,7 @@
  '(w3m-tab-selected-retrieving ((((type x w32 mac) (class color)) (:background "black" :foreground "grey80" :box (:line-width -1 :color "Grey40" :style released-button)))))
  '(w3m-tab-unselected ((t (:inherit tabbar-default :background "black" :foreground "#10650F" :box (:line-width 1 :color "#10650F")))))
  '(w3m-tab-unselected-retrieving ((t (:inherit tabbar-default :background "black" :foreground "grey30" :box (:line-width 1 :color "grey30")))))
- '(w3m-tab-unselected-unseen ((t (:inherit tabbar-default :background "black" :foreground "DodgerBlue" :box (:line-width 1 :color "#10650F")))))
+ '(w3m-tab-unselected-unseen ((t (:inherit tabbar-default :background "black" :foreground "#00b8ff" :box (:line-width 1 :color "#10650F")))))
  '(emmet-preview-input ((t (:foreground "gold" :underline t))))
  '(emmet-preview-output ((t (:background "gray10" :foreground "grey80"))))
  '(web-mode-block-attr-name-face ((t (:foreground "#51D117"))))
@@ -407,6 +407,10 @@
  '(feebleline-time-face ((t (:foreground "gray35"))))
  '(feebleline-git-branch-face ((t (:foreground "gray35"))))
  '(button ((t (:foreground "deepskyblue3" :underline t))))
+ '(highlight-indent-guides-character-face ((t (:foreground "#444444"))))
+ '(highlight-indent-guides-top-character-face ((t (:foreground "#00ff9f"))))
  )
+
+(setq awesome-tray-mode-line-active-color "green4")
 
 (provide 'lazycat-theme)
