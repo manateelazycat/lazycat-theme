@@ -53,6 +53,7 @@
  '(term-default-bg-color "#000000")
  '(term-default-fg-color "#dddd00")
  '(tramp-verbose 0)
+ '(awesome-tray-mode-line-active-color "green4")
  )
 
 ;; Set face.
@@ -410,7 +411,5 @@
  '(highlight-indent-guides-character-face ((t (:foreground "#444444"))))
  '(highlight-indent-guides-top-character-face ((t (:foreground "#00ff9f"))))
  )
-
-(setq awesome-tray-mode-line-active-color "green4")
 
 (provide 'lazycat-theme)
