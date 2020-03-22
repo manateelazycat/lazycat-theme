@@ -1,4 +1,5 @@
-<img src="./screenshot.png">
+<img src="./dark-screenshot.png">
+<img src="./light-screenshot.png">
 
 ## LazyCat's Emacs Theme
 lazycat-theme is my theme package, include two themes: ```lazycat-dark``` and ```lazycat-light```
