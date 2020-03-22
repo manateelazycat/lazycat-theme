@@ -151,7 +151,7 @@ determine the exact padding."
    (builtin        dark-blue)
    (comments       (if lazycat-light-brighter-comments cyan base4))
    (doc-comments   (lazycat-darken comments 0.15))
-   (constants      "#360CA9")
+   (constants      "#008080")
    (functions      "#0C0CA9")
    (keywords       "#A91B0C")
    (methods        cyan)
