@@ -2,9 +2,7 @@
 <img src="./light-screenshot.png">
 
 ## LazyCat's Emacs Theme
-lazycat-theme is my theme package, include two themes: ```lazycat-dark``` and ```lazycat-light```
-
-lazycat-theme is fork from doom-theme and disable mode-line default (see also [awesome-tray](https://github.com/manateelazycat/awesome-tray))
+lazycat-theme is my theme package, code base fork from doom-theme and disable mode-line default (see also [awesome-tray](https://github.com/manateelazycat/awesome-tray))
 
 ### Installation
 
@@ -27,12 +25,19 @@ git clone --depth=1 https://github.com/manateelazycat/lazycat-theme.git
 
 ### Usage
 
+Switch to dark theme:
 ```elisp
 (load-theme 'lazycat-dark t)
 ```
 
-or
+Switch to light theme:
 
 ```elisp
 (load-theme 'lazycat-light t)
+```
+
+Toggle theme:
+
+```elisp
+(lazycat-theme-toggle)
 ```

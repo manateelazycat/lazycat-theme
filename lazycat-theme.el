@@ -1695,4 +1695,11 @@ theme face specs. These is a simplified spec. For example:
     (vc-annotate-background (lazycat-color 'bg)))
   "TODO")
 
+(defun lazycat-theme-toggle ()
+  (interactive)
+  (let ((bg-mode (frame-parameter nil 'background-mode)))
+    (if (eq bg-mode 'dark)
+        (load-theme 'lazycat-light t)
+      (load-theme 'lazycat-dark t))))
+
 (provide 'lazycat-theme)
