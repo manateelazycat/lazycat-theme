@@ -1702,4 +1702,14 @@ theme face specs. These is a simplified spec. For example:
         (load-theme 'lazycat-light t)
       (load-theme 'lazycat-dark t))))
 
+(defun lazycat-theme-is-day ()
+  (let ((current-hour (string-to-number (format-time-string "%H"))))
+    (and (> current-hour 7)
+         (< current-hour 18))))
+
+(defun lazycat-theme-load ()
+  (if (lazycat-theme-is-day)
+      (load-theme 'lazycat-light t)
+    (load-theme 'lazycat-dark t)))
+
 (provide 'lazycat-theme)
