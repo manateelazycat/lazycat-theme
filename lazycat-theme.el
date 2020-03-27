@@ -685,7 +685,7 @@ theme face specs. These is a simplified spec. For example:
     (company-tooltip-search-selection :background (lazycat-darken selection 0.25))
     (company-tooltip-selection  :background selection :weight 'bold)
     (company-tooltip-mouse      :background magenta   :foreground bg :distant-foreground fg)
-    (company-tooltip-annotation                       :foreground violet :distant-foreground bg)
+    (company-tooltip-annotation                       :foreground type :distant-foreground bg)
     (company-scrollbar-bg       :inherit 'tooltip)
     (company-scrollbar-fg       :background highlight)
     (company-preview                              :foreground comments)
