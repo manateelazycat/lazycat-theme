@@ -1712,4 +1712,7 @@ theme face specs. These is a simplified spec. For example:
       (load-theme 'lazycat-light t)
     (load-theme 'lazycat-dark t)))
 
+(defun lazycat-theme-load-with-sunrise ()
+  (run-with-timer 0 (* 60 60) 'lazycat-theme-load))
+
 (provide 'lazycat-theme)

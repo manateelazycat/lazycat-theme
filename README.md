@@ -25,6 +25,8 @@ git clone --depth=1 https://github.com/manateelazycat/lazycat-theme.git
 
 ### Usage
 
+#### Load theme
+
 Switch to dark theme:
 ```elisp
 (load-theme 'lazycat-dark t)
@@ -36,8 +38,20 @@ Switch to light theme:
 (load-theme 'lazycat-light t)
 ```
 
-Toggle theme:
+#### Toggle theme
 
 ```elisp
 (lazycat-theme-toggle)
+```
+
+#### Load theme with current time
+
+```elisp
+(lazycat-theme-load)
+```
+
+#### Check the time every hour then adjusted theme with sunrise
+
+```elisp
+(lazycat-theme-load-with-sunrise)
 ```
