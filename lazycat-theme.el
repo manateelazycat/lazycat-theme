@@ -1708,9 +1708,12 @@ theme face specs. These is a simplified spec. For example:
          (< current-hour 18))))
 
 (defun lazycat-theme-load ()
-  (if (lazycat-theme-is-day)
-      (load-theme 'lazycat-light t)
-    (load-theme 'lazycat-dark t)))
+  (let ((bg-mode (frame-parameter nil 'background-mode)))
+    (if (lazycat-theme-is-day)
+        (when (eq bg-mode 'dark)
+          (load-theme 'lazycat-light t))
+      (when (eq bg-mode 'light)
+        (load-theme 'lazycat-dark t)))))
 
 (defun lazycat-theme-load-with-sunrise ()
   (run-with-timer 0 (* 60 60) 'lazycat-theme-load))
