@@ -1695,15 +1695,15 @@ theme face specs. These is a simplified spec. For example:
     (vc-annotate-background (lazycat-color 'bg)))
   "TODO")
 
-(defvar lazycat-theme-light-is-load nil)
+(defvar lazycat-theme-status "init")
 
 (defun lazycat-theme-load-light ()
   (load-theme 'lazycat-light t)
-  (setq lazycat-theme-light-is-load t))
+  (setq lazycat-theme-status "light"))
 
 (defun lazycat-theme-load-dark ()
   (load-theme 'lazycat-dark t)
-  (setq lazycat-theme-light-is-load nil))
+  (setq lazycat-theme-status "dark"))
 
 (defun lazycat-theme-toggle ()
   (interactive)
@@ -1718,12 +1718,13 @@ theme face specs. These is a simplified spec. For example:
          (< current-hour 18))))
 
 (defun lazycat-theme-load ()
-  (let ((bg-mode (frame-parameter nil 'background-mode)))
-    (if (lazycat-theme-is-day)
-        (unless lazycat-theme-light-is-load
-          (lazycat-theme-load-light))
-      (when lazycat-theme-light-is-load
-        (lazycat-theme-load-dark)))))
+  (if (lazycat-theme-is-day)
+      (when (or (string-equal lazycat-theme-status "init")
+                (string-equal lazycat-theme-status "dark"))
+        (lazycat-theme-load-light))
+    (when (or (string-equal lazycat-theme-status "init")
+              (string-equal lazycat-theme-status "light"))
+      (lazycat-theme-load-dark))))
 
 (defun lazycat-theme-load-with-sunrise ()
   (run-with-timer 0 (* 60 60) 'lazycat-theme-load))
