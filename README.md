@@ -29,13 +29,13 @@ git clone --depth=1 https://github.com/manateelazycat/lazycat-theme.git
 
 Switch to dark theme:
 ```elisp
-(load-theme 'lazycat-dark t)
+(lazycat-theme-load-dark)
 ```
 
 Switch to light theme:
 
 ```elisp
-(load-theme 'lazycat-light t)
+(lazycat-theme-load-light)
 ```
 
 #### Toggle theme
