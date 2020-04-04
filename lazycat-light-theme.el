@@ -200,11 +200,11 @@ determine the exact padding."
    ((line-number-current-line &override) :foreground fg :background bg)
 
    (font-lock-comment-face
-    :foreground comments
+    :foreground "#333333"
     :background (if lazycat-light-comment-bg (lazycat-lighten bg 0.05)))
    (font-lock-doc-face
     :inherit 'font-lock-comment-face
-    :foreground doc-comments)
+    :foreground "#666666")
 
    (mode-line
     :background highlight :foreground highlight     :height 0.1
