@@ -1698,10 +1698,12 @@ theme face specs. These is a simplified spec. For example:
 (defvar lazycat-theme-status "init")
 
 (defun lazycat-theme-load-light ()
+  (mapc #'disable-theme custom-enabled-themes)
   (load-theme 'lazycat-light t)
   (setq lazycat-theme-status "light"))
 
 (defun lazycat-theme-load-dark ()
+  (mapc #'disable-theme custom-enabled-themes)
   (load-theme 'lazycat-dark t)
   (setq lazycat-theme-status "dark"))
 
