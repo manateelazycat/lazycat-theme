@@ -247,7 +247,11 @@ determine the exact padding."
 
    ;; org-mode
    (org-hide :foreground hidden)
-   (solaire-org-hide-face :foreground hidden))
+   (solaire-org-hide-face :foreground hidden)
+
+   ;; secondary region.
+   (secondary-selection :background grey)
+   )
 
 
   ;; --- extra variables ---------------------
