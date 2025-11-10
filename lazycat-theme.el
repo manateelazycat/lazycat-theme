@@ -903,7 +903,6 @@ theme face specs. These is a simplified spec. For example:
     (gnus-group-mail-low         :inherit 'gnus-group-mail-1 :weight 'normal)
     (gnus-group-mail-low-empty   :inherit 'gnus-group-mail-1-empty)
     (gnus-group-news-low         :inherit 'gnus-group-mail-1 :foreground base5)
-    (gnus-group-news-low-empty   :inherit 'gnus-group-news-low :weight 'normal)
     (gnus-header-content         :inherit 'message-header-other)
     (gnus-header-from            :inherit 'message-header-other)
     (gnus-header-name            :inherit 'message-header-name)
